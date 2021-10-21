@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace Core
 {
-    public class Door
+    public sealed class Door
     {
 
     }

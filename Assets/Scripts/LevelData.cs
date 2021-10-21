@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Core
 {
     [CreateAssetMenu(fileName = "Data", menuName = "Create leveldata")]
-    public class LevelData : ScriptableObject
+    public sealed class LevelData : ScriptableObject
     {
         public List<LevelObject> LevelObjects = new List<LevelObject>();
     }

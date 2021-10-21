@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace level
 {
-    public class LevelEditor : EditorWindow
+    public sealed class LevelEditor : EditorWindow
     {
         [SerializeField]
         private Level _level;

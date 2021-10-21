@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class AltInput : IInput
+public sealed class AltInput : IInput
 {
     void IInput.Input()
     {

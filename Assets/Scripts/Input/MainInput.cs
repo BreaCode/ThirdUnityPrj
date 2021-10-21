@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MainInput : IInput
+public sealed class MainInput : IInput
 {
     void IInput.Input()
     {

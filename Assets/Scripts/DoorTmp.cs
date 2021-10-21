@@ -2,7 +2,7 @@ using UnityEngine;
 namespace Core
 {
     //Временный класс
-    public class DoorTmp : MonoBehaviour
+    public sealed class DoorTmp : MonoBehaviour
     {
         private GameObject _player;
         private Animator _animator;

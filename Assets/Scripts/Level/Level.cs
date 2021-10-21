@@ -4,13 +4,13 @@ using UnityEngine;
 namespace level
 {
     [CreateAssetMenu(fileName = "Level", menuName = "Create level")]
-    public class Level : ScriptableObject
+    public sealed class Level : ScriptableObject
     {
         public List<LevelObject> LevelObjects = new List<LevelObject>();
     }
 
     [System.Serializable]
-    public class LevelObject
+    public sealed class LevelObject
     {
         public GameObject Prefab;
         public Vector3 Position;
