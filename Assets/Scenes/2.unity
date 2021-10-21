@@ -18776,6 +18776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1349b505356a124e8a448e4dae33c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraTransform: {fileID: 0}
 --- !u!1 &1531354255
 GameObject:
   m_ObjectHideFlags: 0
@@ -25885,6 +25886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4489e795e931f648a1a72573217896e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: 956a868e0264a1a438cd7149acd85121, type: 2}
 --- !u!1 &2015914206
 GameObject:
   m_ObjectHideFlags: 0

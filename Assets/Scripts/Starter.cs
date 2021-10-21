@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Starter : MonoBehaviour
+namespace Core
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Starter : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private PlayerData _playerData;
+        void Start()
+        {
+            DataInitializator.InitializeData(_playerData);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
+

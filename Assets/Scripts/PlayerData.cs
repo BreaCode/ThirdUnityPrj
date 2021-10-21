@@ -6,6 +6,7 @@ namespace Core
     [CreateAssetMenu(fileName = "Data", menuName = "Create playerdata")]
     public sealed class PlayerData : ScriptableObject
     {
+        public GameObject[] Cameras;
         public GameObject Camera;
         public GameObject PlayerObject;
         public float Speed;
