@@ -19,7 +19,6 @@ namespace Core
             _direction.x = Input.GetAxis("Horizontal");
             _direction.z = Input.GetAxis("Vertical");
             Move();
-            Debug.Log(_playerTransform.position);
         }
 
         private void Move()
