@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 5a5474560c4defc4983a98856cfe2bbd, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2224,7 +2224,6 @@ GameObject:
   m_Component:
   - component: {fileID: 219003303}
   - component: {fileID: 219003305}
-  - component: {fileID: 219003304}
   m_Layer: 0
   m_Name: Fixed Camera
   m_TagString: MainCamera
@@ -2246,14 +2245,6 @@ Transform:
   m_Father: {fileID: 2005447068}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 48.16, y: 0, z: 0}
---- !u!81 &219003304
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219003302}
-  m_Enabled: 1
 --- !u!20 &219003305
 Camera:
   m_ObjectHideFlags: 0
@@ -5102,6 +5093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1520030345}
+  _sceneNumber: 1
 --- !u!65 &492964314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5113,8 +5105,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 4, z: 2}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &497856079
 GameObject:
   m_ObjectHideFlags: 0
