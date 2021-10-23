@@ -11,6 +11,9 @@ namespace Core
             _playerData.PlayerObject = GameObject.Find("PlayerObject");
             _playerData.Camera = _playerData.Cameras[0];
             _playerData.Speed = 10;
+            _playerData.BlueKey= false;
+            _playerData.RedKey = false;
+            _playerData.YellowKey = false;
             //Debug.Log(_playerData.Camera + " " + _playerData.PlayerObject + " " + _playerData.Speed);
         }
     }
