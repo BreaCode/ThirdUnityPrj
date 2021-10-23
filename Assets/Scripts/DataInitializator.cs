@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace Core
 {
-    public class DataInitializator : MonoBehaviour
+    public sealed class DataInitializator : MonoBehaviour
     {
         private static PlayerData _playerData;
         public static void InitializeData(PlayerData playerData)

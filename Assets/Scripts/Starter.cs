@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class Starter : MonoBehaviour
+    public sealed class Starter : MonoBehaviour
     {
         [SerializeField]
         private PlayerData _playerData;

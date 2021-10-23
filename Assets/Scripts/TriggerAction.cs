@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class TriggerAction
+    public sealed class TriggerAction
     {
         // Это надо будет переделать
         public void Action(GameObject triggerObject, PlayerData playerData, string actiontype)

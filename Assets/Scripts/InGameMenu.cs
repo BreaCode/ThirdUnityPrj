@@ -1,12 +1,11 @@
 using UnityEngine;
-
-public class InGameMenu : MonoBehaviour
+namespace Core
 {
-
-    void Start()
+    public class InGameMenu
     {
-        
+
+
+
     }
-
-
 }
+
