@@ -45,5 +45,6 @@ namespace Core
             _playerRigidBody.AddForce(_direction * _speed);
             _cameraTransform.position = new Vector3(_playerTransform.position.x, 7, _playerTransform.position.z);
         }
+
     }
 }

@@ -9,6 +9,7 @@ namespace Core
         public GameObject[] Cameras;
         public GameObject Camera;
         public GameObject PlayerObject;
+        public int SceneNumber;
         public float Speed;
         public bool BlueKey;
         public bool YellowKey;

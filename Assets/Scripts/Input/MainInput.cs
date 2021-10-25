@@ -1,9 +1,11 @@
 using UnityEngine;
-
-public sealed class MainInput : IInput
+namespace input
 {
-    void IInput.Input()
+    public sealed class MainInput : IInput
     {
+        void IInput.Input()
+        {
 
+        }
     }
 }

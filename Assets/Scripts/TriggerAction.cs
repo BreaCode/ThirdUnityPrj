@@ -21,12 +21,17 @@ namespace Core
             if (tag == "Door")
             {
                 Door door = new Door();
-                door.DoorAction(triggerObject, playerData,"Open");
+                door.DoorAction(triggerObject, playerData, "Open");
             }
             else if (tag == "Key")
             {
                 Key key = new Key();
                 key.PickUp(triggerObject, playerData);
+            }
+            else if (tag == "Exit")
+            {
+                Exit exit = new Exit(playerData);
+                exit.Action();
             }
         }
         void ExitAction(GameObject triggerObject, PlayerData playerData, string tag)

@@ -3,38 +3,30 @@ using UnityEngine.SceneManagement;
 
 namespace Core
 {
-    public sealed class Exit : MonoBehaviour
+    public sealed class Exit
     {
         [SerializeField] private GameObject _player;
-        [SerializeField] private int _sceneNumber;
+        private int _sceneNumber;
 
-        public void Close()
+        public Exit(PlayerData playerData)
+        {
+            _sceneNumber = playerData.SceneNumber;
+        }
+
+        internal void Action()
+        {
+            if (_sceneNumber != 1)
+            {
+                SceneManager.LoadScene(_sceneNumber + 1);
+            }
+            else
+            {
+                Close();
+            }
+        }
+        private void Close()
         {
             Application.Quit();
-        }
-        //Сделал это тут пока. Просто что не вешать лишние скрипты
-        public void Continue()
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1f;
-            _player.GetComponent<Player>().enabled = !_player.GetComponent<Player>().enabled;
-            _player.GetComponent<Player>().Menu.SetActive(false);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other == _player.GetComponentInChildren<SphereCollider>())
-            {
-                Debug.Log("Exit");
-                if (_sceneNumber != 1)
-                {
-                    SceneManager.LoadScene(_sceneNumber + 1);
-                }
-                else
-                {
-                    Close();
-                }
-            }
         }
     }
 }

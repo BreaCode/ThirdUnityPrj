@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 namespace Core
 {
     public sealed class DataInitializator : MonoBehaviour
@@ -10,6 +12,7 @@ namespace Core
             _playerData.Cameras = GameObject.FindGameObjectsWithTag("MainCamera");
             _playerData.PlayerObject = GameObject.Find("PlayerObject");
             _playerData.Camera = _playerData.Cameras[0];
+            _playerData.SceneNumber = SceneManager.GetActiveScene().buildIndex;
             _playerData.Speed = 10;
             _playerData.BlueKey= false;
             _playerData.RedKey = false;

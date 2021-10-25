@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "Data", menuName = "Create leveldata")]
-    public sealed class LevelData : ScriptableObject
+    [CreateAssetMenu(fileName = "Data", menuName = "Create data")]
+    public sealed class Data : ScriptableObject
     {
         public List<LevelObject> LevelObjects = new List<LevelObject>();
     }

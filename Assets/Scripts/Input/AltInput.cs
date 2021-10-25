@@ -1,10 +1,11 @@
-
 using UnityEngine;
-
-public sealed class AltInput : IInput
+namespace input
 {
-    void IInput.Input()
+    public sealed class AltInput : IInput
     {
+        void IInput.Input()
+        {
 
+        }
     }
 }
