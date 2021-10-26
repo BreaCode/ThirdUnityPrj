@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace Core
+namespace Junk
 {
     public sealed class Player : MonoBehaviour
     {
@@ -26,7 +26,5 @@ namespace Core
                 gameObject.GetComponent<Player>().enabled = !gameObject.GetComponent<Player>().enabled;
             }
         }
-
-
     }
 }

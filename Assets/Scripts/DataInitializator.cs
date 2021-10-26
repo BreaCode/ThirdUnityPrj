@@ -15,7 +15,7 @@ namespace Core
             _playerData.ControlType = "Mouse";
             _playerData.SceneNumber = SceneManager.GetActiveScene().buildIndex;
             _playerData.Speed = 10;
-            _playerData.BlueKey= false;
+            _playerData.BlueKey = false;
             _playerData.RedKey = false;
             _playerData.YellowKey = false;
             //Debug.Log(_playerData.Camera + " " + _playerData.PlayerObject + " " + _playerData.Speed);
