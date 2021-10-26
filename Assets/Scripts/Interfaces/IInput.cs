@@ -1,5 +1,9 @@
-
-public interface IInput 
+using System;
+namespace UserInput
 {
-    void Input();
+    public interface IInput
+    {
+        event Action<float> AxisOnChange;
+        void GetAxis();
+    }
 }

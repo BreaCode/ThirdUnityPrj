@@ -1,4 +1,4 @@
-namespace input
+namespace UserInput
 {
     public static class InputManager
     {

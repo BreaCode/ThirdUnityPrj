@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Core
 {
-    public sealed class DataInitializator : MonoBehaviour
+    public sealed class DataInitializator
     {
         private static PlayerData _playerData;
         public static void InitializeData(PlayerData playerData)
@@ -12,6 +12,7 @@ namespace Core
             _playerData.Cameras = GameObject.FindGameObjectsWithTag("MainCamera");
             _playerData.PlayerObject = GameObject.Find("PlayerObject");
             _playerData.Camera = _playerData.Cameras[0];
+            _playerData.ControlType = "Mouse";
             _playerData.SceneNumber = SceneManager.GetActiveScene().buildIndex;
             _playerData.Speed = 10;
             _playerData.BlueKey= false;
