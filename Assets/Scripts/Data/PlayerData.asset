@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495ba9444877b644d997787b56647b50, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
+  Cameras:
+  - {fileID: 0}
+  - {fileID: 0}
   Camera: {fileID: 0}
   PlayerObject: {fileID: 0}
-  Speed: 0
+  ControlType: Mouse
+  SceneNumber: 1
+  Speed: 10
   BlueKey: 0
   YellowKey: 0
   RedKey: 0
