@@ -5,11 +5,12 @@ namespace Core
 {
     public sealed class Exit
     {
-        [SerializeField] private GameObject _player;
+        private PlayerData _playerData;
         private int _sceneNumber;
 
         public Exit(PlayerData playerData)
         {
+            _playerData = playerData;
             _sceneNumber = playerData.SceneNumber;
         }
 
@@ -18,6 +19,7 @@ namespace Core
             if (_sceneNumber != 1)
             {
                 SceneManager.LoadScene(_sceneNumber + 1);
+                DataInitializator.InitializeData(_playerData);
             }
             else
             {
