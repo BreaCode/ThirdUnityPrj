@@ -9,6 +9,7 @@ namespace Core
         private readonly PlayerData _playerData;
         private Rigidbody _playerRigidBody;
         private float _speed;
+        private float _height;
         private float _horizontal;
         private float _vertical;
         private Vector3 _direction;
@@ -22,6 +23,7 @@ namespace Core
             _playerData = playerData;
             _camera = _playerData.Camera.transform;
             _playerRigidBody = _playerData.PlayerObject.GetComponent<Rigidbody>();
+            _height = _playerData.CameraHeight;
             _speed = _playerData.Speed;
             _horizontalInputProxy = input.inputHorizontal;
             _verticalInputProxy = input.inputVertical;
@@ -47,7 +49,7 @@ namespace Core
             _direction.x = _horizontal;
             _direction.z = _vertical;
             _playerRigidBody.AddForce(_direction * _speed);
-            _camera.position = new Vector3(_player.position.x, 7, _player.position.z);
+            _camera.position = new Vector3(_player.position.x, _height, _player.position.z);
 
         }
 

@@ -23,7 +23,6 @@ namespace Core
                 action.Action(gameObject, _playerData, "Exit");
             }
         }
-
     }
 }
 

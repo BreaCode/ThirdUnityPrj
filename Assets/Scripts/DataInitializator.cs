@@ -14,6 +14,7 @@ namespace Core
             _playerData.Camera = _playerData.Cameras[0];
             _playerData.ControlType = "Mouse";
             _playerData.SceneNumber = SceneManager.GetActiveScene().buildIndex;
+            _playerData.CameraHeight = 6;
 
             _playerData.BlueKey = false;
             _playerData.RedKey = false;
