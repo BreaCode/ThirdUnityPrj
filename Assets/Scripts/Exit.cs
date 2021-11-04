@@ -16,14 +16,17 @@ namespace Core
 
         internal void Action()
         {
-            if (_sceneNumber != 1)
+            if (_playerData.Score * 2 >= _playerData.MaxScore)
             {
-                SceneManager.LoadScene(_sceneNumber + 1);
-                DataInitializator.InitializePalyerData(_playerData);
-            }
-            else
-            {
-                Close();
+                if (_sceneNumber != 1)
+                {
+                    SceneManager.LoadScene(_sceneNumber + 1);
+                    DataInitializator.InitializePalyerData(_playerData);
+                }
+                else
+                {
+                    Close();
+                }
             }
         }
         private void Close()
