@@ -18,7 +18,12 @@ namespace Core
         }
         void EnterAction(GameObject triggerObject, PlayerData playerData, string tag)
         {
-            if (tag == "Door")
+            if (tag == "Coin")
+            {
+                Coin coin = new Coin();
+                coin.PickUp(triggerObject, playerData);
+            }
+            else if (tag == "Door")
             {
                 Door door = new Door();
                 door.DoorAction(triggerObject, playerData, "Open");

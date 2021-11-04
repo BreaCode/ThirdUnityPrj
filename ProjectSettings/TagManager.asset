@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Key
   - Exit
+  - Coin
   layers:
   - Default
   - TransparentFX

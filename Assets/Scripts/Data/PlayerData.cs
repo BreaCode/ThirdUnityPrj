@@ -11,6 +11,8 @@ namespace Core
         public GameObject PlayerObject;
         public string ControlType;
         public int SceneNumber;
+        public int Score;
+        public int MaxScore;
         public float CameraHeight;
         public float Speed;
         public bool BlueKey;

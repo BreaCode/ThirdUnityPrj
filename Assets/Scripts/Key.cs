@@ -17,7 +17,9 @@ namespace Core
             {
                 playerData.YellowKey = true;
             }
+            
             triggerObject.SetActive(false);
+            GameEventSystem.current.keyUpdate();
         }
     }
 }

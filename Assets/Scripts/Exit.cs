@@ -19,7 +19,7 @@ namespace Core
             if (_sceneNumber != 1)
             {
                 SceneManager.LoadScene(_sceneNumber + 1);
-                DataInitializator.InitializeData(_playerData);
+                DataInitializator.InitializePalyerData(_playerData);
             }
             else
             {

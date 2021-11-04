@@ -33,7 +33,6 @@ namespace Core
             _controlType.onValueChanged.AddListener(delegate { ControlChanged (_controlType);});
             _settings.SetActive(false);
             _menu.SetActive(false);
-            _gui.SetActive(false);
         }
         void Update()
         {
@@ -43,6 +42,7 @@ namespace Core
                 Time.timeScale = 0f;
                 _settings.SetActive(false);
                 _menu.SetActive(true);
+                _gui.SetActive(false);
             }
         }
 
@@ -61,6 +61,7 @@ namespace Core
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1f;
             _menu.SetActive(false);
+            _gui.SetActive(true);
         }
         private void Close()
         {

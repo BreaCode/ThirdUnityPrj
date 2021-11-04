@@ -11,7 +11,7 @@ namespace Core
 
         void Start()
         {
-            DataInitializator.InitializeData(_playerData);
+            DataInitializator.InitializePalyerData(_playerData);
             _controllers = new Controllers();
             new GameInitialization(_controllers, _playerData);
             _controllers.Initialization();

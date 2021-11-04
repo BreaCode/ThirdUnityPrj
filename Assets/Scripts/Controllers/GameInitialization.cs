@@ -8,10 +8,12 @@ namespace Core
         {
             Camera camera = Camera.main;
             var inputInitialization = new UserInput.InputInitialization(data);
+            var giuInitialization = new GUIController(data);
             //var playerFactory = new PlayerFactory(data.Player);
             //var playerInitialization = new PlayerInitialization(playerFactory, data.Player.Position);
             //var enemyFactory = new EnemyFactory(data.Enemy);
             //var enemyInitialization = new EnemyInitialization(enemyFactory);
+            controllers.Add(giuInitialization);
             controllers.Add(inputInitialization);
             //controllers.Add(playerInitialization);
             //controllers.Add(enemyInitialization);
