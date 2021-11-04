@@ -23,6 +23,12 @@ namespace Core
             _controllers.Execute(deltaTime);
         }
 
+        private void FixedUpdate()
+        {
+            var deltaTime = Time.deltaTime;
+            _controllers.Fixed(deltaTime);
+        }
+
         private void LateUpdate()
         {
             var deltaTime = Time.deltaTime;

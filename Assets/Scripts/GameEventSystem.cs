@@ -37,6 +37,22 @@ namespace Core
                 onKeyUpdate();
             }
         }
+        public event Action onSpeedUpdate;
+        public void speedUpdate()
+        {
+            if (onSpeedUpdate != null)
+            {
+                onSpeedUpdate();
+            }
+        }
+        public event Action<string> onControlUpdate;
+        public void controlUpdate(string controlType)
+        {
+            if (onControlUpdate != null)
+            {
+                onControlUpdate(controlType);
+            }
+        }
     }
 }
 

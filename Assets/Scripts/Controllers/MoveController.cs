@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public sealed class MoveController : IExecute, ICleanup
+    public sealed class MoveController : IFixed, ICleanup
     {
         private readonly Transform _player;
         private readonly Transform _camera;
@@ -29,8 +29,12 @@ namespace Core
             _verticalInputProxy = input.inputVertical;
             _horizontalInputProxy.AxisOnChange += HorizontalOnAxisOnChange;
             _verticalInputProxy.AxisOnChange += VerticalOnAxisOnChange;
+            GameEventSystem.current.onSpeedUpdate += UpdateSpeed;
         }
-
+        private void UpdateSpeed()
+        {
+            _speed = _playerData.Speed;
+        }
         private void VerticalOnAxisOnChange(float value)
         {
             _vertical = value;
@@ -41,14 +45,12 @@ namespace Core
             _horizontal = value;
         }
 
-        public void Execute(float deltaTime)
+        public void Fixed(float deltaTime)
         {
-            //var speed = deltaTime * _playerData.Speed;
-            //_move.Set(_horizontal * speed, _vertical * speed, 0.0f);
-            //_player.localPosition += _move;
             _direction.x = _horizontal;
             _direction.z = _vertical;
             _playerRigidBody.AddForce(_direction * _speed);
+            Debug.Log(_speed);
             _camera.position = new Vector3(_player.position.x, _height, _player.position.z);
 
         }
@@ -57,6 +59,10 @@ namespace Core
         {
             _horizontalInputProxy.AxisOnChange -= HorizontalOnAxisOnChange;
             _verticalInputProxy.AxisOnChange -= VerticalOnAxisOnChange;
+        }
+        ~MoveController()
+        {
+            GameEventSystem.current.onSpeedUpdate -= UpdateSpeed;
         }
     }
 }

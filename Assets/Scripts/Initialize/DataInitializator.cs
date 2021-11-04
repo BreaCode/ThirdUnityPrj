@@ -30,7 +30,7 @@ namespace Core
 
             if (_playerData.Speed == 0)
             {
-                _playerData.Speed = 10;
+                _playerData.Speed = 50;
             }
             //Debug.Log(_playerData.Camera + " " + _playerData.PlayerObject + " " + _playerData.Speed);
         }

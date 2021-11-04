@@ -71,12 +71,14 @@ namespace Core
         private void SetSpeed(float speed)
         {
             _playerData.Speed = speed;
+            GameEventSystem.current.speedUpdate();
         }
 
         private void ControlChanged(TMP_Dropdown _controlType)
         {
             //Тут ошибка
-            _playerData.ControlType = _controlType.itemText.ToString();
+            _playerData.ControlType = _controlType.itemText.text; 
+            GameEventSystem.current.controlUpdate(_playerData.ControlType);
             //UserInput.InputInitialization inputInit = new UserInput.InputInitialization(_playerData);
             //inputInit.Initialization();
         }

@@ -6,6 +6,7 @@ namespace Core
     {
         private readonly List<IInitialization> _initializeControllers;
         private readonly List<IExecute> _executeControllers;
+        private readonly List<IFixed> _fixedControllers;
         private readonly List<ILateExecute> _lateControllers;
         private readonly List<ICleanup> _cleanupControllers;
 
@@ -13,6 +14,7 @@ namespace Core
         {
             _initializeControllers = new List<IInitialization>(8);
             _executeControllers = new List<IExecute>(8);
+            _fixedControllers = new List<IFixed>(8);
             _lateControllers = new List<ILateExecute>(8);
             _cleanupControllers = new List<ICleanup>(8);
         }
@@ -27,6 +29,11 @@ namespace Core
             if (controller is IExecute executeController)
             {
                 _executeControllers.Add(executeController);
+            }
+
+            if (controller is IFixed fixedExecuteController)
+            {
+                _fixedControllers.Add(fixedExecuteController);
             }
 
             if (controller is ILateExecute lateExecuteController)
@@ -57,6 +64,15 @@ namespace Core
                 _executeControllers[index].Execute(deltaTime);
             }
         }
+
+        public void Fixed(float deltaTime)
+        {
+            for (var index = 0; index < _fixedControllers.Count; ++index)
+            {
+                _fixedControllers[index].Fixed(deltaTime);
+            }
+        }
+
 
         public void LateExecute(float deltaTime)
         {
