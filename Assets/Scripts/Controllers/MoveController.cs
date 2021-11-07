@@ -50,9 +50,7 @@ namespace Core
             _direction.x = _horizontal;
             _direction.z = _vertical;
             _playerRigidBody.AddForce(_direction * _speed);
-            Debug.Log(_speed);
             _camera.position = new Vector3(_player.position.x, _height, _player.position.z);
-
         }
 
         public void Cleanup()

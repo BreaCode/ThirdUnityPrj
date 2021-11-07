@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,6 +33,13 @@ namespace Core
             {
                 _playerData.Speed = 50;
             }
+            #region exception
+            if (_playerData.Camera == null)
+                throw new Exception("No camera found");
+            if (_playerData.PlayerObject == null)
+                throw new Exception("No player object found");
+            #endregion
+
             //Debug.Log(_playerData.Camera + " " + _playerData.PlayerObject + " " + _playerData.Speed);
         }
         public static void InitializeData(Data data)
@@ -45,6 +53,14 @@ namespace Core
             _data.GUI = GameObject.Find("GUI");
             _data.DefaultMode = "Normal";
             _data.SceneNumber = SceneManager.GetActiveScene().buildIndex;
+            #region exception
+            if (_data.Keys == null)
+                throw new Exception("No keys found");
+            if (_data.Doors == null)
+                throw new Exception("No doors found");
+            if (_data.Exit == null)
+                throw new Exception("No exit found");
+            #endregion
         }
 
     }
