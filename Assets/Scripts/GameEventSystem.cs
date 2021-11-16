@@ -5,7 +5,6 @@ namespace Core
 {
     public sealed class GameEventSystem : MonoBehaviour
     {
-        //Это синглтон и так нельзя? Какая алтернатива?
         public static GameEventSystem current;
 
         void Awake()
@@ -13,16 +12,16 @@ namespace Core
             current = this;
         }
 
-        public event Action onToggle;
-        public void toggle()
+        public event Action onWin;
+        public void Win()
         {
-            if (onToggle != null)
+            if (onWin != null)
             {
-                onToggle();
+                onWin();
             }
         }
         public event Action onScoreUpdate;
-        public void scoreUpdate()
+        public void ScoreUpdate()
         {
             if (onScoreUpdate != null)
             {
@@ -30,7 +29,7 @@ namespace Core
             }
         }
         public event Action onKeyUpdate;
-        public void keyUpdate()
+        public void KeyUpdate()
         {
             if (onKeyUpdate != null)
             {
@@ -38,7 +37,7 @@ namespace Core
             }
         }
         public event Action onSpeedUpdate;
-        public void speedUpdate()
+        public void SpeedUpdate()
         {
             if (onSpeedUpdate != null)
             {
@@ -46,7 +45,7 @@ namespace Core
             }
         }
         public event Action<string> onControlUpdate;
-        public void controlUpdate(string controlType)
+        public void ControlUpdate(string controlType)
         {
             if (onControlUpdate != null)
             {

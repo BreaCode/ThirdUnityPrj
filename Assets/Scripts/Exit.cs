@@ -8,6 +8,7 @@ namespace Core
         private PlayerData _playerData;
         private int _sceneNumber;
 
+
         public Exit(PlayerData playerData)
         {
             _playerData = playerData;
@@ -25,7 +26,8 @@ namespace Core
                 }
                 else
                 {
-                    Close();
+                    GameEventSystem.current.Win();
+                    //Close();
                 }
             }
         }

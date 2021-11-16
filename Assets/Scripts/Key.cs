@@ -19,7 +19,7 @@ namespace Core
             }
             
             triggerObject.SetActive(false);
-            GameEventSystem.current.keyUpdate();
+            GameEventSystem.current.KeyUpdate();
         }
     }
 }

@@ -7,44 +7,44 @@ namespace Core
         // Это надо будет переделать
         public void Action(GameObject triggerObject, PlayerData playerData, string actiontype)
         {
-            if (actiontype == "Enter")
+            if (actiontype == ActionsManager.ENTER)
             {
-                EnterAction(triggerObject, playerData, triggerObject.tag);
+                EnterAction(triggerObject, playerData);
             }
-            else if (actiontype == "Exit")
+            else if (actiontype == ActionsManager.EXIT)
             {
-                ExitAction(triggerObject, playerData, triggerObject.tag);
+                ExitAction(triggerObject, playerData);
             }
         }
-        void EnterAction(GameObject triggerObject, PlayerData playerData, string tag)
+        void EnterAction(GameObject triggerObject, PlayerData playerData)
         {
-            if (tag == "Coin")
+            if (triggerObject.CompareTag(TagsManager.COIN))
             {
                 Coin coin = new Coin();
                 coin.PickUp(triggerObject, playerData);
             }
-            else if (tag == "Door")
+            else if (triggerObject.CompareTag(TagsManager.DOOR))
             {
                 Door door = new Door();
-                door.DoorAction(triggerObject, playerData, "Open");
+                door.DoorAction(triggerObject, playerData, ActionsManager.OPEN);
             }
-            else if (tag == "Key")
+            else if (triggerObject.CompareTag(TagsManager.KEY))
             {
                 Key key = new Key();
                 key.PickUp(triggerObject, playerData);
             }
-            else if (tag == "Exit")
+            else if (triggerObject.CompareTag(TagsManager.EXIT))
             {
                 Exit exit = new Exit(playerData);
                 exit.Action();
             }
         }
-        void ExitAction(GameObject triggerObject, PlayerData playerData, string tag)
+        void ExitAction(GameObject triggerObject, PlayerData playerData)
         {
-            if (tag == "Door")
+            if (triggerObject.CompareTag(TagsManager.DOOR))
             {
                 Door door = new Door();
-                door.DoorAction(triggerObject, playerData, "Close");
+                door.DoorAction(triggerObject, playerData, ActionsManager.CLOSE);
             }
         }
     }

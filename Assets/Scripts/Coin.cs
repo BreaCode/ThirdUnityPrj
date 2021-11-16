@@ -6,7 +6,7 @@ namespace Core
         public void PickUp(GameObject triggerObject, PlayerData playerData)
         {
             playerData.Score += 1;
-            GameEventSystem.current.scoreUpdate();
+            GameEventSystem.current.ScoreUpdate();
             triggerObject.SetActive(false);
             //Debug.Log(playerData.Score + " / " + playerData.MaxScore);
         }

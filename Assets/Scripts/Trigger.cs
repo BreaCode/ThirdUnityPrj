@@ -11,7 +11,7 @@ namespace Core
             if (other.gameObject == _playerData.PlayerObject)
             {
                 TriggerAction action = new TriggerAction();
-                action.Action(gameObject, _playerData, "Enter");
+                action.Action(gameObject, _playerData, ActionsManager.ENTER);
             }
         }
 
@@ -20,7 +20,7 @@ namespace Core
             if (other.gameObject == _playerData.PlayerObject)
             {
                 TriggerAction action = new TriggerAction();
-                action.Action(gameObject, _playerData, "Exit");
+                action.Action(gameObject, _playerData, ActionsManager.EXIT);
             }
         }
     }
