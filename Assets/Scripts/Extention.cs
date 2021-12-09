@@ -11,6 +11,7 @@ public static class Extention
         output = inputString.Length;
         return output;
     }
+
     #region Vector
     public static Vector3 MultiplyX(this Vector3 v, float val)
     {
